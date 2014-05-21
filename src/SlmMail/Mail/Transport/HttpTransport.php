@@ -43,6 +43,7 @@ namespace SlmMail\Mail\Transport;
 use SlmMail\Service\MailServiceInterface;
 use Zend\Mail\Transport\TransportInterface;
 use Zend\Mail\Message;
+use SlmMail\Mail\Message\Mandrill;
 
 class HttpTransport implements TransportInterface
 {
@@ -64,6 +65,8 @@ class HttpTransport implements TransportInterface
      */
     public function send(Message $message)
     {
-        $this->service->send($message);
+        return $this->service->send($message);
+
     }
+
 }
