@@ -68,5 +68,13 @@ class HttpTransport implements TransportInterface
         return $this->service->send($message);
 
     }
+    
+    /**
+     * {@inheritDoc}
+     */
+    public function getTemplateInfo($name)
+    {
+        return $this->service->getTemplateInfo($name);
 
+    }
 }
